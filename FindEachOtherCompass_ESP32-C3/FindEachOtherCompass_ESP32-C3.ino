@@ -1,6 +1,10 @@
 // This is a special compass that doesn't just show North, but also points into the direction of someone else
 // so that you can easiy find each other. This is very useful for outdoor team sports like Airsoft.
 
+// TODO:
+// - Find the MAC addresses of your own devices and add it to OtherDeviceMACAddress[] in TwoWayComms.h
+// - Find the magnetic declination angle of your own location and replace it in ApplyDeclinationAngle()
+
 #define DEVICE 0      // Define this when compiling for device 0
 //#define DEVICE 1    // Define this when compiling for device 1
 
@@ -257,7 +261,7 @@ void GetMyLocation()
 // http://www.magnetic-declination.com/
 inline float ApplyDeclinationAngle(const float angleRadians)
 {
-  // Magnetic ceclination of my location: +15° 18' Positive East
+  // Magnetic declination of my location: +15° 18' Positive East
   // 15 + 18/60 => 15.3 Deg = 0.267 Rad
   static const float declinationAngle = 0.267f;
   return angleRadians + declinationAngle;
