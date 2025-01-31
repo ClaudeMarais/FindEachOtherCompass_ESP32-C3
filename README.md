@@ -13,3 +13,5 @@ See detailed documentation in file Documentation.pdf
 * Buzzer
 * Battery
 * Molle Tourniquet Pouch
+
+![Image1](https://github.com/ClaudeMarais/FindEachOtherCompass_ESP32-C3/blob/main/Images/image1.jpg?raw=true)
